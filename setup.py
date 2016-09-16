@@ -17,18 +17,20 @@ except:
 
 # Thanks to Kenneth Reitz, I stole the template for this : https://github.com/kennethreitz
 setup(
-    name='customer-bot',
+    name='customerbot',
     version='0.0.1',
     description='An Intelligent bot for online customer support system',
     long_description=longdesc,
-    author='Vikesh Tiwari, Siddharth Shekhar and Shaquib Khan',
+    author='Vikesh Tiwari',
     author_email='tvicky002@gmail.com',
-    url='https://github.com/vicky002/customer-bot',
+    url='https://github.com/vicky002/customerbot',
     packages=packages,
-    scripts= ['bin/customer-bot'],
+    scripts= ['bin/customerbot'],
     package_data = {'': ['LICENCE',], '':['']},
     include_package_data=True,
-    install_requires=required,
+    platforms=['any'],
+    keywords=['customerbot', 'chatbot', 'chat', 'bot'],
+    install_requires=requirements,
     license='MIT',
     classifiers=(
         'Development Status :: 1 - Beta',

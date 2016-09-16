@@ -61,6 +61,14 @@ $ git commit -m 'your_commit_message'
 $ git push origin my_branch_name
 
 ```
+Install `pylint` for all python code linting and maintaing coding standards
+
+```
+$ sudo apt-get install pylint
+```
+
+Now, whenever you make any change in the code please run `pylint file_or_module_name` and fix all the others before pushing your code.
+
 That's all! Once you're done with your new feature, create a pull request. Each PR will be reviewed by one of us before it goes to `master` branch. This way we all will be on the same track of what's happening in your codebase. 
 
 
