@@ -60,3 +60,44 @@ class Statement(object):
 
         if not updated:
             self.in_response_to.append(response)
+
+    def remove_response(self, response_text):
+        """
+        :param response_text: response text to be removed
+        :return: Removes a response from a statement's response list based on response_text value
+        """
+        for response in self.in_response_to:
+            if response_text == response.text:
+                return response.occurrence
+        return 0
+
+    def get_response_count(self, statement):
+        """
+        :param statement:
+        :return: return the no of times the statement occurs in the database
+        """
+        for response in self.in_response_to:
+            if statement.text == response.text:
+                return response.occurrence
+        return 0
+
+    def serialize(self):
+        """
+        :return: Returns a dictionary representation of the current object
+        """
+        data = {}
+        data["text"] = self.text
+        data["in_response_to"] = []
+        data.update(self.extra_data)
+
+        for response in self.in_response_to:
+            data["in_response_to"].append(response.serialize())
+        return data
+
+    class InvalidTypeException(Exception):
+
+        def __init__(self, value='Received an unexpted value type'):
+            self.value = value
+
+        def __str__(self):
+            return repr(self.value)
