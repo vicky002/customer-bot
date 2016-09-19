@@ -1,4 +1,4 @@
-.. image:: ../../images/banner.png
+.. image:: /customerbot/images/banner.png
 
 About CustomerBot
 ================
