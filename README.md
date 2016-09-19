@@ -2,7 +2,7 @@
 
 A bot for online customer support. 
 
-![Banner](../../images/banner.png)
+![Banner](/customerbot/images/banner.png)
 
 ## Index
 
