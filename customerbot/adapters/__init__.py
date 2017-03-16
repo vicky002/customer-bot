@@ -1,1 +1,0 @@
-from customerbot.adapters.adapter import Adapter
